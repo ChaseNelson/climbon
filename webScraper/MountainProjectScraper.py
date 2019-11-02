@@ -14,6 +14,7 @@ page_html = client.read()
 client.close()
 
 # Parse mt project for crag info
+stateList = []
 payload = {}
 page_soup = BeautifulSoup(page_html, 'html.parser')
 crag_guide = page_soup.findAll('div', {'id': 'route-guide'})[0]
@@ -25,6 +26,7 @@ for column in crag_guide_columns:
         state = state_info[0].text
         if state == 'International' or state == '* In Progress':
             continue
+        stateList.append(state)
         state_data = []
         for i in range(1, len(state_info)):
             crag = state_info[i].text.replace('*', '').strip()
