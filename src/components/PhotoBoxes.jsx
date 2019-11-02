@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { withStyles } from '@material-ui/styles';
 import GridList from '@material-ui/core/GridList';
-import GridListTile from '@material-ui/core/GridListTile';
+//import GridListTile from '@material-ui/core/GridListTile';
 import theme from '../theme';
 
-  render() {
+  {render() {
     const { classes } = this.props;
     const { tileData } = this.state;
     return (
@@ -18,7 +18,7 @@ import theme from '../theme';
         </GridList>
       </React.Fragment>
     );
-  }
+  };
 }
 
 export default withStyles(theme)(PhotoBoxes);
