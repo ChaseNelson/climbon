@@ -23,4 +23,12 @@ export default createStyles({
     width: 500,
     height: 450,
   },
+  paper: {
+    height: 150,
+    width: 100,
+    textAlign: 'center',
+    fontFamily: 'Verdana',
+    textTransform: 'lowercase',
+    fontSize: 18,
+  },
 });
