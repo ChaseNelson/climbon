@@ -7,3 +7,5 @@ geolocator.config({
     key: '',
   },
 });
+
+export default geolocator;
