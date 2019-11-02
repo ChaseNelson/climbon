@@ -6,6 +6,9 @@ export default createStyles({
   },
   title: {
     flexGrow: 1,
+    fontFamily: 'Verdana',
+    fontSize: 48,
+    textTransform: 'lowercase',
   },
   card: {
     maxWidth: 345,

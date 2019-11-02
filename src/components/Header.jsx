@@ -15,7 +15,7 @@ class Header extends Component {
     const { classes } = this.props;
     return (
       <React.Fragment className={classes.root}>
-        <AppBar position="static">
+        <AppBar position="static" color="#ffffff">
           <Toolbar>
             <Typography variant="h6" className={classes.title}>
               Climb On
