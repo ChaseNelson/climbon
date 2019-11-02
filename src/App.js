@@ -10,6 +10,7 @@ import CommentBox from './components/CommentBox';
 import NewComment from './components/NewComment';
 import NewPost from './components/NewPost';
 import CragDropdown from './components/CragDropdown';
+import GridBoxes from './components/GridBoxes';
 import './App.css';
 
 class App extends Component {
@@ -28,7 +29,7 @@ class App extends Component {
               <Route exact path="/Browse" component={Browse} />
             </Switch>
           </main>
-          <NewPost />
+          <GridBoxes />
         </div>
       </>
     );
