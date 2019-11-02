@@ -28,3 +28,7 @@ for column in crag_guide_columns:
             crag = state_info[i].text
             state_data.append(crag)
         payload[state] = state_data
+
+# Send payload to the firebase database
+db = firebase.database()
+db.child('locations').child('crags').set(payload)
