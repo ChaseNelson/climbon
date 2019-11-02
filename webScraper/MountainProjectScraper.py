@@ -23,12 +23,16 @@ for column in crag_guide_columns:
     for state in states:
         state_info = state.findAll('a', {'class': 'text-truncate'})
         state = state_info[0].text
+        if state == 'International' or state == '* In Progress':
+            continue
         state_data = []
         for i in range(1, len(state_info)):
-            crag = state_info[i].text
-            state_data.append(crag)
+            crag = state_info[i].text.replace('*', '').strip()
+            state_data.append({'type': 'crag', 'name': crag})
         payload[state] = state_data
+
+print(payload)
 
 # Send payload to the firebase database
 db = firebase.database()
-db.child('locations').child('crags').set(payload)
+db.child('locations').set(payload)
