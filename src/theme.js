@@ -7,4 +7,7 @@ export default createStyles({
   title: {
     flexGrow: 1,
   },
+  card: {
+    maxWidth: 345,
+  },
 });
