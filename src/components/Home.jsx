@@ -5,7 +5,7 @@ class Home extends Component {
   render() {
     return (
       <>
-        <Typography>This is the home page.</Typography>
+        <Typography />
       </>
     );
   }
