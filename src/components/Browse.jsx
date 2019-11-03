@@ -12,7 +12,10 @@ class Browse extends Component {
       <Grid item xs={4}>
         <Typography variant="h5">{loc}:</Typography>
         {locations[loc].map(area => (
-          <Typography variant="body2">• {area.name}</Typography>
+          <Typography variant="body2">
+            • {area.name} --{' '}
+            {area.type == 'crag' ? 'Outdoor Crag' : 'Indoor Gym'}
+          </Typography>
         ))}
       </Grid>
     ));
