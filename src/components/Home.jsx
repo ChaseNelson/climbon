@@ -33,16 +33,20 @@ class Home extends Component {
   generateLocations = () => {
     const { locations } = this.props;
     const randomLoc = [];
-    for (let i = 0; i < 6; i++) {
+    for (let i = 0; i < 20; i++) {
       const s = Object.keys(locations)[Math.floor(Math.random() * 50)];
       const l = locations[s][Math.floor(Math.random() * locations[s].length)];
-
-      randomLoc.push({
+      const obj = {
         name: l.name,
         state: s,
         type: l.type,
         city: l.location,
-      });
+      };
+      if (obj.type == 'crag') {
+        randomLoc.push(obj);
+      } else {
+        i -= 1;
+      }
     }
     this.setState({ randomLoc });
   };
