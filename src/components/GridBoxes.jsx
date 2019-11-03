@@ -4,6 +4,7 @@ import Paper from '@material-ui/core/Paper';
 import { withStyles } from '@material-ui/core/styles';
 import { Typography } from '@material-ui/core';
 import theme from '../theme';
+import WeatherBox from './WeatherBox';
 
 class GridBoxes extends Component {
   render() {
@@ -17,11 +18,12 @@ class GridBoxes extends Component {
         alignItems="flex-end"
       >
         <Grid item xs={12} sm={6}>
-          <Paper className={classes.paper}>Weather</Paper>
+          <Paper className={classes.paper}>
+            Weather
+            <WeatherBox />
+          </Paper>
         </Grid>
-        <Grid item xs={12} sm={6}>
-          <Paper className={classes.paper}>Radar</Paper>
-        </Grid>
+
         <Grid item xs={12} sm={6}>
           <Paper className={classes.paper}>
             <Typography>Gear</Typography>

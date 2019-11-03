@@ -1,10 +1,18 @@
 import React, { Component } from 'react';
-import Box from '@material-ui/core/Box';
+import Typography from '@material-ui/core/Typography';
+import { withStyles } from '@material-ui/core/styles';
+import theme from '../theme';
+import WeatherBox from './WeatherBox';
 
 class Weather extends Component {
   render() {
-    return <Box>This is the weather</Box>;
+    return (
+      <>
+        <Typography>Weather</Typography>
+        <WeatherBox />
+      </>
+    );
   }
 }
 
-export default Weather;
+export default withStyles(theme)(Weather);
