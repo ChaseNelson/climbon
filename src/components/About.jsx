@@ -6,7 +6,7 @@ import theme from '../theme';
 
 class About extends Component {
   render() {
-    const { mode, src, height, width, style, ...props } = this.props;
+    const { mode, src, height, width, style } = this.props;
     const modes = {
       fill: 'cover',
       fit: 'contain',
@@ -32,15 +32,16 @@ class About extends Component {
 
     return (
       <>
-        <div {...props} style={{ ...defaults, ...style, ...important }} />
-        <Box>
+        <div style={{ ...defaults, ...style, ...important }} />
+        <Box textAlign="center">
           The developers, Chase and Krista, got into rock climbing their
           freshman year at Purdue University and since then their love for the
           outdoors has kept gorwing. Now they also love hiking, camping,
           geocaching, anything to do with the outside and nature! This app will
           allow you to find nearby crags and gyms to go rock climbing, and rate
           the routes you completed for other peoples reference and for your own
-          accomplishment!
+          accomplishment! Our favorite crags are Mascatatuck and the Red River
+          Gorge!
         </Box>
       </>
     );
