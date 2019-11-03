@@ -54,7 +54,7 @@ class Home extends Component {
   displaySpots = () => {
     const { randomLoc } = this.state;
     return randomLoc.map(e => (
-      <Grid item>
+      <Grid item xs={3}>
         <GymCard name={e.name} state={e.state} city={e.city} type={e.type} />
       </Grid>
     ));
@@ -64,7 +64,7 @@ class Home extends Component {
     const { classes, locations } = this.props;
     return (
       <>
-        <Grid container>
+        <Grid container spacing={0}>
           <Grid item xs={12}>
             <Typography variant="h4">Popular Climbing Spots</Typography>
           </Grid>

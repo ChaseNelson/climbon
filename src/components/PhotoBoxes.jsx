@@ -24,7 +24,7 @@ class PhotoBoxes extends Component {
       type: 'photo',
     };
     client
-      .search(`${name} ${state}`, options)
+      .search(`${name} ${state} climbing`, options)
       .then(images => {
         console.log(images);
         this.setState({ images });
