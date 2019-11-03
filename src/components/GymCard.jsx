@@ -34,7 +34,7 @@ class GymCard extends Component {
             {type === 'crag' && (
               <PhotoBoxes name={name} state={state} city={city} />
             )}
-            <CommentBox />
+            {/* <CommentBox /> */}
           </CardContent>
         </Card>
       </>
