@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import { Route, Switch } from 'react-router-dom';
-import axios from 'axios';
+import Drawer from '@material-ui/core/Drawer';
+import AppBar from '@material-ui/core/AppBar';
 import geolocator from './geolocator';
 import Header from './components/Header';
 import Home from './components/Home';
@@ -11,6 +12,8 @@ import Weather from './components/Weather';
 import GridBoxes from './components/GridBoxes';
 import './App.css';
 import firebase from './firebase';
+import theme from './theme';
+import { withStyles } from '@material-ui/core/styles';
 
 class App extends Component {
   constructor(props) {
@@ -65,11 +68,17 @@ class App extends Component {
 
   render() {
     const { latitude, loading, longitude, locations } = this.state;
+    const { classes } = this.props;
     return (
       <>
         <CssBaseline />
         <div>
           <Header />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
           <main>
             <div />
             <Switch>
@@ -86,10 +95,15 @@ class App extends Component {
                 )}
               />
               <Route exact path="/About" component={About} />
-              <Route exact path="/Weather" component={Weather} />
               <Route exact path="/Browse" component={Browse} />
             </Switch>
-            <GridBoxes />
+            <Drawer
+              variant="permanent"
+              anchor="right"
+              className={classes.drawer}
+            >
+              <GridBoxes />
+            </Drawer>
           </main>
         </div>
       </>
@@ -97,4 +111,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default withStyles(theme)(App);

@@ -1,5 +1,7 @@
 import { createStyles } from '@material-ui/core/styles';
 
+const drawerWidth = 240;
+
 export default createStyles({
   root: {
     flexGrow: 1,
@@ -30,5 +32,16 @@ export default createStyles({
     fontFamily: 'Verdana',
     textTransform: 'lowercase',
     fontSize: 18,
+  },
+  appBar: {
+    width: `calc(100% - ${drawerWidth}px)`,
+    marginRight: drawerWidth,
+  },
+  drawer: {
+    width: drawerWidth,
+    flexShrink: 1,
+  },
+  gridbox: {
+    width: drawerWidth - 30,
   },
 });
