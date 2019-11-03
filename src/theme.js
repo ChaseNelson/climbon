@@ -1,4 +1,4 @@
-import { createStyles } from '@material-ui/styles';
+import { createStyles } from '@material-ui/core/styles';
 
 export default createStyles({
   root: {
@@ -22,5 +22,13 @@ export default createStyles({
   gridList: {
     width: 500,
     height: 450,
+  },
+  paper: {
+    height: 150,
+    width: 300,
+    textAlign: 'center',
+    fontFamily: 'Verdana',
+    textTransform: 'lowercase',
+    fontSize: 18,
   },
 });

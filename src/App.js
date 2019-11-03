@@ -8,6 +8,7 @@ import Home from './components/Home';
 import About from './components/About';
 import Browse from './components/Browse';
 import Weather from './components/Weather';
+import GridBoxes from './components/GridBoxes';
 import './App.css';
 import firebase from './firebase';
 
@@ -88,6 +89,7 @@ class App extends Component {
               <Route exact path="/Weather" component={Weather} />
               <Route exact path="/Browse" component={Browse} />
             </Switch>
+            <GridBoxes />
           </main>
         </div>
       </>
