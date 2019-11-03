@@ -25,7 +25,7 @@ export default createStyles({
   },
   paper: {
     height: 150,
-    width: 100,
+    width: 300,
     textAlign: 'center',
     fontFamily: 'Verdana',
     textTransform: 'lowercase',
