@@ -81,16 +81,20 @@ class App extends Component {
           <br />
           <main>
             <div />
-            <Switch>
-              <Route
-                exact
-                path="/"
-                render={props => (
-                  <Home
-                    latitude={latitude}
-                    longitude={longitude}
-                    isLocationLoading={loading}
-                    locations={locations}
+            <Grid container spacing={3}>
+              <Grid item xs={10}>
+                <Switch>
+                  <Route
+                    exact
+                    path="/"
+                    render={props => (
+                      <Home
+                        latitude={latitude}
+                        longitude={longitude}
+                        isLocationLoading={loading}
+                        locations={locations}
+                      />
+                    )}
                   />
                 )}
               />
