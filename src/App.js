@@ -81,26 +81,28 @@ class App extends Component {
           <br />
           <main>
             <div />
-            <Switch>
-              <Route
-                exact
-                path="/"
-                render={props => (
-                  <Home
-                    latitude={latitude}
-                    longitude={longitude}
-                    isLocationLoading={loading}
-                    locations={locations}
-                  />
-                )}
-              />
-              <Route exact path="/About" component={About} />
-              <Route
-                exact
-                path="/Browse"
-                render={props => <Browse locations={locations} />}
-              />
-            </Switch>
+            <div className={classes.appBar}>
+              <Switch>
+                <Route
+                  exact
+                  path="/"
+                  render={props => (
+                    <Home
+                      latitude={latitude}
+                      longitude={longitude}
+                      isLocationLoading={loading}
+                      locations={locations}
+                    />
+                  )}
+                />
+                <Route exact path="/About" component={About} />
+                <Route
+                  exact
+                  path="/Browse"
+                  render={props => <Browse locations={locations} />}
+                />
+              </Switch>
+            </div>
             <Drawer
               variant="permanent"
               anchor="right"
