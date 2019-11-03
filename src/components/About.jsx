@@ -6,7 +6,7 @@ import theme from '../theme';
 
 class About extends Component {
   render() {
-    const { mode, src, height, width, style } = this.props;
+    const { mode, height, width, style } = this.props;
     const modes = {
       fill: 'cover',
       fit: 'contain',
