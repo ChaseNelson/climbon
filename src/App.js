@@ -95,7 +95,11 @@ class App extends Component {
                 )}
               />
               <Route exact path="/About" component={About} />
-              <Route exact path="/Browse" component={Browse} />
+              <Route
+                exact
+                path="/Browse"
+                render={props => <Browse locations={locations} />}
+              />
             </Switch>
             <Drawer
               variant="permanent"

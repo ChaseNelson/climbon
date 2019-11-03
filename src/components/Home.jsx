@@ -62,7 +62,7 @@ class Home extends Component {
       <>
         <Grid container>
           <Grid item xs={12}>
-            <Typography>Popular Climbing Spots</Typography>
+            <Typography variant="h4">Popular Climbing Spots</Typography>
           </Grid>
           {this.displaySpots()}
         </Grid>
