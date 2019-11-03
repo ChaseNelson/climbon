@@ -15,7 +15,7 @@ class Header extends Component {
     const { classes } = this.props;
     return (
       <React.Fragment className={classes.root}>
-        <AppBar position="static" color="#ffffff">
+        <AppBar position="fixed" color="#ffffff" className={classes.appBar}>
           <Toolbar>
             <Typography variant="h6" className={classes.title}>
               Climb On
@@ -23,12 +23,10 @@ class Header extends Component {
             <Button component={Link} to="/About">
               About
             </Button>
-            <Button component={Link} to="/Weather">
-              Weather
-            </Button>
             <Button component={Link} to="/Browse">
               Browse
             </Button>
+            <Button />
           </Toolbar>
         </AppBar>
       </React.Fragment>
