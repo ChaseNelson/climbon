@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import { Route, Switch } from 'react-router-dom';
 import axios from 'axios';
+import Grid from '@material-ui/core/Grid';
 import geolocator from './geolocator';
 import Header from './components/Header';
 import Home from './components/Home';
@@ -72,24 +73,34 @@ class App extends Component {
           <Header />
           <main>
             <div />
-            <Switch>
-              <Route
-                exact
-                path="/"
-                render={props => (
-                  <Home
-                    latitude={latitude}
-                    longitude={longitude}
-                    isLocationLoading={loading}
-                    locations={locations}
+            <Grid container spacing={3}>
+              <Grid item xs={10}>
+                <Switch>
+                  <Route
+                    exact
+                    path="/"
+                    render={props => (
+                      <Home
+                        latitude={latitude}
+                        longitude={longitude}
+                        isLocationLoading={loading}
+                        locations={locations}
+                      />
+                    )}
                   />
-                )}
-              />
-              <Route exact path="/About" component={About} />
-              <Route exact path="/Weather" component={Weather} />
-              <Route exact path="/Browse" component={Browse} />
-            </Switch>
-            <GridBoxes />
+                  <Route exact path="/About" component={About} />
+                  <Route exact path="/Weather" component={Weather} />
+                  <Route
+                    exact
+                    path="/Browse"
+                    render={props => <Browse locations={locations} />}
+                  />
+                </Switch>
+              </Grid>
+            </Grid>
+            <Grid item xs={2}>
+              <GridBoxes />
+            </Grid>
           </main>
         </div>
       </>
